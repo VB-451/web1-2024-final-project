@@ -1,7 +1,15 @@
 import React from "react";
 
+import styles from "./styles/Profile.module.css"
+
+import NavBar from "../components/NavBar"
+
 export default function Profile(){
     return (
-        <div>Profile Page</div>
+        <>
+            <NavBar />
+            <div>Profile Page</div>
+        </>
+        
     )
 }

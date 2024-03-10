@@ -1,7 +1,15 @@
 import React from "react";
 
+import styles from "./styles/MainPage.module.css"
+
+import NavBar from "../components/NavBar"
+
 export default function MainPage(){
     return (
-        <div>Main Page is here! Wow!</div>
+        <>
+            <NavBar />
+            <div>Main Page</div>
+        </>
+        
     )
 }

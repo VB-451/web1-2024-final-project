@@ -5,14 +5,17 @@ import reportWebVitals from './reportWebVitals';
 
 import {
   createBrowserRouter,
+  json,
   RouterProvider,
 } from "react-router-dom";
 
 import MainPage from './pages/MainPage';
-import LoginRegistration from './pages/LoginRegistration';
+import Registration from './pages/Registration';
+import Login from './pages/Login'
 import Profile from './pages/Profile';
 import Gallery from './pages/Gallery';
 import Generate from './pages/Generate';
+
 
 const router = createBrowserRouter([
   {
@@ -20,8 +23,12 @@ const router = createBrowserRouter([
     element: <MainPage/>,
   },
   {
-    path: "/login-registration",
-    element: <LoginRegistration/>,
+    path: "/registration",
+    element: <Registration/>,
+  },
+  {
+    path: "/login",
+    element: <Login/>,
   },
   {
     path: "/profile/:id",
@@ -36,6 +43,9 @@ const router = createBrowserRouter([
     element: <Generate/>
   }
 ]);
+
+let logged = {loggedIn : false, currentUserID : 0}
+localStorage.setItem('logged', JSON.stringify(logged));
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

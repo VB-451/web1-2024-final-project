@@ -1,7 +1,15 @@
 import React from "react";
 
+import styles from "./styles/Gallery.module.css"
+
+import NavBar from "../components/NavBar"
+
 export default function Gallery(){
     return (
-        <div>Gallery Page</div>
+        <>
+            <NavBar />
+            <div>Gallery Page</div>
+        </>
+        
     )
 }
