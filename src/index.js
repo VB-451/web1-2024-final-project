@@ -1,13 +1,47 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+
+import MainPage from './pages/MainPage';
+import LoginRegistration from './pages/LoginRegistration';
+import Profile from './pages/Profile';
+import Gallery from './pages/Gallery';
+import Generate from './pages/Generate';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainPage/>,
+  },
+  {
+    path: "/login-registration",
+    element: <LoginRegistration/>,
+  },
+  {
+    path: "/profile/:id",
+    element: <Profile/>,
+  },
+  {
+    path: "/gallery",
+    element: <Gallery/>,
+  },
+  {
+    path: "/generate",
+    element: <Generate/>
+  }
+]);
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
