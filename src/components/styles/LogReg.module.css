@@ -1,0 +1,81 @@
+.body {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.loginBlock{
+    margin-top: 100px;
+    width: 355px;
+    height: 524px;
+    background: radial-gradient(circle at top, #90F99D , #06CCFD);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .modeSelect{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.modeOption{
+    padding: 20px 40px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s;
+}
+
+.modeOption:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.selected{
+    border: 1px solid white;
+} */
+
+.optionAction{
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+    margin-top: 40px;
+}
+
+.inputs{
+    margin-top: 15px;
+    width: 70%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.input{
+    background-color: white;
+    border: none;
+    height: 50px;
+    border-radius: 10px;
+    padding: 7px;
+}
+
+
+
+.continueButton{
+    border: none;
+    width: 70%;
+    height: 50px;
+    border-radius: 20px;
+    background-color: white;
+    transition: background-color 0.3s;
+}
+
+.continueButton:hover{
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+}
