@@ -10,8 +10,6 @@ import {
 } from "react-router-dom";
 
 import MainPage from './pages/MainPage';
-import Registration from './pages/Registration';
-import Login from './pages/Login'
 import Profile from './pages/Profile';
 import Gallery from './pages/Gallery';
 import Generate from './pages/Generate';
@@ -21,14 +19,6 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <MainPage/>,
-  },
-  {
-    path: "/registration",
-    element: <Registration/>,
-  },
-  {
-    path: "/login",
-    element: <Login/>,
   },
   {
     path: "/profile/:id",
@@ -44,8 +34,8 @@ const router = createBrowserRouter([
   }
 ]);
 
-let logged = {loggedIn : false, currentUserID : 0}
-localStorage.setItem('logged', JSON.stringify(logged));
+// let logged = {loggedIn : false, currentUserID : 0}
+// localStorage.setItem('logged', JSON.stringify(logged));
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -1,9 +1,12 @@
 import React from "react";
+import { useState } from "react";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
 import styles from "./styles/NavBar.module.css";
+import Modal from "./Modal"
+import LogReg from "./LogReg"
 
 import { Link } from "react-router-dom";
 
@@ -20,6 +23,14 @@ const theme = createTheme({
 });
 
 export default function NavBar() {
+  
+  const [isLoginOpen, setIsLoginOpen] = useState(false); // State for modal
+  const [mode, setMode] = useState("Login");
+  
+  const toggleLoginModal = () => {
+    setIsLoginOpen(!isLoginOpen);
+  };
+  
   return (
     <ThemeProvider theme={theme}>
       <div className={styles.navbody}>
@@ -40,12 +51,15 @@ export default function NavBar() {
         </div>
         <div className="buttons">
           <Stack direction="row" spacing={2}>
-            <Link to="/login"><Button color="primary">Log In</Button></Link>
-            <Link to="/registration"><Button variant="contained" color="primary">Register</Button></Link>
-            <Link to="/generate"><Button variant="contained" color="secondary">Generate</Button></Link>
+            <Button color="primary" onClick={()=>{setMode("Login"); toggleLoginModal()}}>Log In</Button>
+            <Button variant="contained" color="primary" onClick={()=>{setMode("Register"); toggleLoginModal()}}>Register</Button>
+            <Link to="/generate"><Button variant="contained" color="secondary" >Generate</Button></Link>
           </Stack>
         </div>
       </div>
+      <Modal isOpen={isLoginOpen} onClose={toggleLoginModal}>
+        <LogReg modeState={mode} />
+      </Modal>
     </ThemeProvider>
   );
 }
