@@ -24,7 +24,7 @@ const theme = createTheme({
 
 export default function NavBar() {
   
-  const [isLoginOpen, setIsLoginOpen] = useState(false); // State for modal
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [mode, setMode] = useState("Login");
   
   const toggleLoginModal = () => {
