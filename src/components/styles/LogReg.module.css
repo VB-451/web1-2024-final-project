@@ -45,11 +45,12 @@
     border-radius: 20px;
     background-color: white;
     margin-top: 30px;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
     
 }
 
 .continueButton:hover{
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.3);
 }

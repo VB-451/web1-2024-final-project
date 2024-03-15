@@ -82,13 +82,13 @@ export default function LogReg(props){
                     <div className={styles.optionAction}>{mode === "Login" ? "Login" : "Register"}</div>
                     <div className={styles.inputs}>
                         <input type="text" placeholder={mode === "Login" ? "Username or Email" : "Username"} className={styles.input} value={username} onChange={(e)=>{setUsername(e.target.value)}}/>
-                        {mode === "Register" && (<input type="text" placeholder="Email" className={styles.input} value={email} onChange={handleEmailChange}/>)}
+                        {mode === "Register" && (<input type="email" placeholder="Email" className={styles.input} value={email} onChange={handleEmailChange}/>)}
                         <input type="password" placeholder="Password" className={styles.input} value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
                         {mode === "Register" && (<input type="password" placeholder="Confirm Password" className={styles.input} value={confirmPassword} onChange={handlePasswordConfirm}/>)}
                     </div>
                     <div className={styles.changeLog}>{mode === "Login" ? "New to SynthiArtEscape?" : "Already have an account?"}   
                     </div><div className={styles.changeFunction} onClick={()=>{changeMode()}}>{mode === "Login" ? "Register" : "Login"}</div>
-                    <button className={styles.continueButton} disabled={(!emailValidated || !passwordConfirmed) && mode === "Register" } onClick={mode === "Login" ? login : register}>{mode === "Login" ? "Login" : "Register"}</button>
+                    <button className={styles.continueButton} disabled={(!emailValidated || !passwordConfirmed || !username) && mode === "Register" } onClick={mode === "Login" ? login : register}>{mode === "Login" ? "Login" : "Register"}</button>
                 </div>
             </div>
         </>
