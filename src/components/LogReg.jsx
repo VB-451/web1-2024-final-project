@@ -9,6 +9,7 @@ export default function LogReg(props){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
+    const [failedLogin, setFailedLogin] = useState(false);
     
     const [emailValidated, setEmailValidated] = useState(false);
     const [passwordConfirmed, setPasswordConfirmed] = useState(false);
@@ -68,10 +69,11 @@ export default function LogReg(props){
                 logged.currentUserID = user.uid;
                 localStorage.setItem("logged", JSON.stringify(logged));
                 window.location.reload();
-                return 0;
             }
         }
-        alert("Invalid login or password")
+        setTimeout(() => {
+            setFailedLogin(true);
+        }, 1500);
     }
 
 
@@ -86,9 +88,12 @@ export default function LogReg(props){
                         <input type="password" placeholder="Password" className={styles.input} value={password} onChange={(e)=>{setPassword(e.target.value)}}/>
                         {mode === "Register" && (<input type="password" placeholder="Confirm Password" className={styles.input} value={confirmPassword} onChange={handlePasswordConfirm}/>)}
                     </div>
-                    <div className={styles.changeLog}>{mode === "Login" ? "New to SynthiArtEscape?" : "Already have an account?"}   
-                    </div><div className={styles.changeFunction} onClick={()=>{changeMode()}}>{mode === "Login" ? "Register" : "Login"}</div>
-                    <button className={styles.continueButton} disabled={(!emailValidated || !passwordConfirmed || !username) && mode === "Register" } onClick={mode === "Login" ? login : register}>{mode === "Login" ? "Login" : "Register"}</button>
+                    {mode === "Login" && failedLogin && (<div className={styles.errorlogin}>Invalid login or password</div>)}
+                    <div className={styles.changeLog}>{mode === "Login" ? "New to SynthiArtEscape?" : "Already have an account?"}</div>
+                    <div className={styles.changeFunction} onClick={()=>{changeMode()}}>{mode === "Login" ? "Register" : "Login"}</div>
+                    <button className={styles.continueButton} disabled={(!emailValidated || !passwordConfirmed || !username) && mode === "Register" || (!username || !password) && mode === "Login" }
+                            onClick={mode === "Login" ? login : register}>{mode === "Login" ? "Login" : "Register"}
+                    </button>
                 </div>
             </div>
         </>

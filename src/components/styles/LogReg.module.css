@@ -38,6 +38,13 @@
     cursor: pointer;
 }
 
+.errorlogin{
+    color: rgb(231, 73, 73);
+    position: relative;
+    top: -20px;
+    
+}
+
 .continueButton{
     border: none;
     width: 70%;
