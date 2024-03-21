@@ -1,7 +1,3 @@
-*{
-    color: white;
-}
-
 .main {
     width: 100%;
     height: 600px;
@@ -9,6 +5,31 @@
     justify-content: space-evenly;
     align-items: center;
     margin-top: 100px;
+    color: white;
+}
+
+.promptLable, .stylesLable{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.promptLable{
+    margin-bottom: 15px;
+}
+
+.stylesLable{
+    margin-top: 30px;
+}
+
+
+
+.promptInput{
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    width: 100%;
+    height: 50px;
 }
 
 .styles {
@@ -31,6 +52,27 @@
 }
 
 .styleImg {
-    width: 50px;
+    width: 70px;
     height: auto;
+    border-radius: 10px;
+}
+
+.styleSelected .styleImg {
+    border: 2px solid #90F99D; /* Change border color and width as needed */
+}
+
+.styleImg:hover{
+    cursor: pointer;
+}
+
+.generation{
+    width: 400px;
+    height: 575px;
+}
+
+.generateLocation{
+    background-color: red;
+    width: 100%;
+    height: 400px;
+
 }

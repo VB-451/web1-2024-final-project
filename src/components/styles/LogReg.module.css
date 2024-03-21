@@ -47,6 +47,7 @@
 
 .continueButton{
     border: none;
+    color: black;
     width: 70%;
     height: 50px;
     border-radius: 20px;
