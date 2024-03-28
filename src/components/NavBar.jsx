@@ -38,7 +38,7 @@ export default function NavBar() {
   const logOut = () =>{
     setLoggedIn(false);
     localStorage.setItem("logged", JSON.stringify({loggedIn:false, currentUserID: null}));
-    window.location.reload();
+    window.location.assign("/");
   }
 
   return (

@@ -23,7 +23,7 @@ export default function Generate(){
         {name: "Ink", src: "https://images.rawpixel.com/image_400/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjQ1OC1uLTA3LWJsYWNrYW5kd2hpdGVfMV8wLmpwZw.jpg"},
         {name: "Gothic", src: "https://i.pinimg.com/736x/04/95/26/0495268ff432ce69afa46fa10b3a3a51.jpg"},
         {name: "Fantasy", src: "https://storage.googleapis.com/pai-images/10ac108383e445269f1fa15dc19f53d6.jpeg"},
-        {name: "Dark Fantasy", src: "https://images.nightcafe.studio/jobs/1lw0IkvQKknG4Be9Pu12/1lw0IkvQKknG4Be9Pu12--1--f7ewf.jpg?tr=w-1600,c-at_max"},
+        {name: "Dark Fantasy", src: "https://images.nightcafe.studio/jobs/1lw0IkvQKknG4Be9Pu12/1lw0IkvQKknG4Be9Pu12--1--f7ewf.jpg?tr=w-1600,c-at_max"}
     ]
 
     const [selectedStyle, setSelectedStyle] = useState("None");

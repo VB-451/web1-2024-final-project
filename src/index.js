@@ -5,7 +5,6 @@ import reportWebVitals from './reportWebVitals';
 
 import {
   createBrowserRouter,
-  json,
   RouterProvider,
 } from "react-router-dom";
 
@@ -33,9 +32,6 @@ const router = createBrowserRouter([
     element: <Generate/>
   }
 ]);
-
-// let logged = {loggedIn : false, currentUserID : 0}
-// localStorage.setItem('logged', JSON.stringify(logged));
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

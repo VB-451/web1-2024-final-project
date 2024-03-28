@@ -41,13 +41,11 @@
 .errorlogin{
     color: rgb(231, 73, 73);
     position: relative;
-    top: -20px;
     
 }
 
 .continueButton{
     border: none;
-    color: black;
     width: 70%;
     height: 50px;
     border-radius: 20px;
